@@ -1,0 +1,31 @@
+[project]
+name = "justllm"
+version = "1.0.0"
+description = "Open source LLM project"
+readme = "README.md"
+authors = [
+    { name = "justgodtears", email = "oopyrchal@pm.me" }
+]
+requires-python = ">=3.14"
+dependencies = [
+    "datasets>=5.2.0",
+    "numpy>=2.5.5",
+    "tiktoken>=0.14.0",
+    "torch>=2.11.0",
+    "tqdm>=4.70.1",
+]
+
+[project.scripts]
+justllm = "justllm:main"
+
+[build-system]
+requires = ["uv_build>=0.13.5,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.uv.sources]
+torch = {index = "pytorch-cu132"}
+
+[[tool.uv.index]]
+name = "pytorch-cu132"
+url = "https://download.pytorch.org/whl/cu132"
+explicit = true
