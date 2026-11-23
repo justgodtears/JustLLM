@@ -15,7 +15,7 @@ from datasets import load_dataset
 
 DATASET = "HuggingFaceFW/fineweb-edu"
 CONFIG = "sample-10BT"
-TARGET_TOKENS = 200_000_000
+TARGET_TOKENS = 2_500_000_000
 VAL_TOKENS = 2_000_000
 BATCH_DOCS = 1000
 NUM_THREADS = 12
